@@ -16,7 +16,7 @@
 
     <div class="flex flex-col container max-w-screen-lg mx-auto bg-green-500 rounded-xl h-screen">
       <!--this section shows weather for current location mentioned on CV-->
-      <div style="display:none" class="weather z-10 flex flex-col fixed mx-auto bg-gray-400 bottom-2 md:bottom-10 rounded-md">
+      <div style="display:none" class="weather z-10 flex flex-col fixed mx-auto bg-gray-400 bottom-2 md:bottom-10 rounded-md pl-2">
         <div class="flex flex-row justify-between text-lg font-normal text-gray-900 text-4xl">
           <div class="flex">
             Weather in
@@ -28,8 +28,8 @@
 
         <hr>
         <div class="flex flex-row justify-between text-base font-normal text-gray-900 text-3xl">
-          <div class="flex mr-12 ml-2">
-            Today
+          <div class="flex flex-row mr-12 ml-2">
+            Today<img id="wicon" src="" alt="Weather icon">
           </div>
           <div class="weatherDescription flex mr-2">
             loading
@@ -61,7 +61,7 @@
         </div>
       </div>
       <!-- this section contains profile picture and contact informations -->
-      <div class="flex flex-col md:flex-row">
+      <div class="flex flex-col md:flex-row pr-8 pl-8">
 
         <!-- profile picture-->
         <div class="flex flex-grow md:mx-16 my-6">
@@ -92,10 +92,10 @@
       </div>
 
       <!-- this section contains rest of the cv -->
-      <div class="flex flex-col md:flex-row mb-3 flex-grow">
+      <div class="flex flex-col md:flex-row mb-3 flex-grow ">
 
         <!-- this section contains education and skills -->
-        <div class="flex flex-col bg-green-500 flex-grow md:w-2/5">
+        <div class="flex flex-col bg-green-500 flex-grow md:w-2/5 pr-9 pl-5">
           <!-- this section contains education -->
           <div class="flex flex-col">
 
@@ -250,7 +250,7 @@
         </div>
 
         <!-- this section contains projects and achievements -->
-        <div class="flex flex-col bg-green-400 flex-grow rounded-xl md:w-3/5">
+        <div class="flex flex-col bg-green-400 flex-grow rounded-xl md:w-3/5 pr-9 pl-5">
           <!-- this section contains projects -->
           <div class="flex flex-col">
 

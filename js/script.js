@@ -48,7 +48,7 @@ $(document).ready(function()
         axios.get(URL)
         .then(function ({data: {main: mainData,weather: weatherData, name: cityname}}){
           // Getting Data from response
-          let{description}=weatherData[0];
+          let{description,icon}=weatherData[0];
           let{temp,feels_like, humidity}=mainData;
           //alert(temp+' '+feels_like+' '+humidity+' '+description);
           $('.cityname').text(cityname);
@@ -56,6 +56,7 @@ $(document).ready(function()
           $('.temparature').text((temp-273).toFixed(2)+'℃');
           $('.feels_like').text((feels_like-273).toFixed(2)+'℃');
           $('.humidity').text(humidity+'%');
+          $('#wicon').attr("src", "http://openweathermap.org/img/w/"+icon+".png");
         })
         .then(function()
         {
