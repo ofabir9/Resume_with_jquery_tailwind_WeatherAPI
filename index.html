@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Omar Faruque Abir CV</title>
+
+  </head>
+  <body class="bg-gray-300">
+
+    <div class="flex flex-col container max-w-screen-lg mx-auto bg-green-500 rounded-xl h-screen">
+      <!--this section shows weather for current location mentioned on CV-->
+      <div style="display:none" class="weather z-10 flex flex-col fixed mx-auto bg-gray-400 bottom-2 md:bottom-10 rounded-md">
+        <div class="flex flex-row justify-between text-lg font-normal text-gray-900 text-4xl">
+          <div class="flex">
+            Weather in
+          </div>
+          <div class="cityname flex mr-2">
+            loading
+          </div>
+        </div>
+
+        <hr>
+        <div class="flex flex-row justify-between text-base font-normal text-gray-900 text-3xl">
+          <div class="flex mr-12 ml-2">
+            Today
+          </div>
+          <div class="weatherDescription flex mr-2">
+            loading
+          </div>
+        </div>
+        <div class="flex flex-row justify-between text-base font-normal text-gray-900 text-3xl">
+          <div class="flex mr-12 ml-2">
+            Temparature
+          </div>
+          <div class="temparature flex mr-2">
+            loading
+          </div>
+        </div>
+        <div class="flex flex-row justify-between text-base font-normal text-gray-900 text-3xl">
+          <div class="flex mr-12 ml-2">
+            Feels Like
+          </div>
+          <div class="feels_like flex mr-2">
+            loading
+          </div>
+        </div>
+        <div class="flex flex-row justify-between text-base font-normal text-gray-900 text-3xl">
+          <div class="flex mr-12 ml-2">
+            Humidty
+          </div>
+          <div class="humidity flex mr-2">
+            loading
+          </div>
+        </div>
+      </div>
+      <!-- this section contains profile picture and contact informations -->
+      <div class="flex flex-col md:flex-row">
+
+        <!-- profile picture-->
+        <div class="flex flex-grow md:mx-16 my-6">
+          <img class="w-60 rounded-full border-8 border-green-100 mx-auto mb-8" src="assets/images/abir.png" alt="">
+        </div>
+
+        <!-- contact information-->
+        <div class="flex flex-col flex-grow mx-4 md:my-auto">
+          <div class="text-5xl font-semibold text-center md:text-right mb-5">
+            Omar Faruque Abir
+          </div>
+          <div class="text-1xl font-semibold text-center md:text-right flex flex-row justify-center md:justify-end text-gray-800">
+            <span class="iconify" data-icon="entypo:old-mobile" data-inline="false"></span> +8801759389123</div>
+          <div class="text-1xl font-semibold text-center md:text-right flex flex-row justify-center md:justify-end text-gray-800">
+            <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false"></span><a href="https://github.com/ofabir9" target="_blank"> github.com/ofabir9 </a>
+          </div>
+          <div class="text-1xl font-semibold text-center md:text-right flex flex-row justify-center md:justify-end text-gray-800">
+            <span class="iconify" data-icon="akar-icons:linkedin-fill" data-inline="false"></span> <a href="https://www.linkedin.com/in/ofabir9/" target="_blank">linkedin.com/in/ofabir9</a>
+          </div>
+          <div class="text-1xl font-semibold text-center md:text-right flex flex-row justify-center md:justify-end text-gray-800">
+            <span class="iconify" data-icon="clarity:email-line" data-inline="false"></span><a href="mailto:omarfaruqueabir@gmail.com" >omarfaruqueabir@gmail.com</a>
+          </div>
+          <div class="location text-1xl font-semibold text-center md:text-right flex flex-row justify-center md:justify-end text-gray-800">
+            <span class="iconify" data-icon="fluent:location-16-filled" data-inline="false"></span>13/2 Paikpara D-type Quarter, Mirpur-1, Dhaka-1216
+          </div>
+          </div>
+
+      </div>
+
+      <!-- this section contains rest of the cv -->
+      <div class="flex flex-col md:flex-row mb-3 flex-grow">
+
+        <!-- this section contains education and skills -->
+        <div class="flex flex-col bg-green-500 flex-grow md:w-2/5">
+          <!-- this section contains education -->
+          <div class="flex flex-col">
+
+            <hr class="m-1">
+            <div class="flex flex-row text-3xl font-semibold text-gray-800">
+              <span class="iconify" data-icon="zondicons:education" data-inline="false"></span>Education
+            </div>
+            <hr class="m-1">
+
+            <div class="flex flex-col ml-10">
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">B.Sc. in Computer science & Engineering</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between" style="display:none;">
+                  <p class="text-1xl text-gray-800">Jahangirnagar University</p>
+                  <div class="flex">
+                    <span class="iconify" data-icon="ic:round-date-range" data-inline="false"></span>2016-2021
+                  </div>
+                  <div class="flex">
+                    <span class="iconify" data-icon="ic:round-grade" data-inline="false"></span>CGPA: 3.60 out of 4.00</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Higher Secondary School Certificate</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between" style="display:none;">
+                  <p class="text-1xl text-gray-800">Dhaka Residential Model College, Science</p>
+                  <div class="flex">
+                    <span class="iconify" data-icon="ic:round-date-range" data-inline="false"></span>2015
+                  </div>
+                  <div class="flex">
+                    <span class="iconify" data-icon="ic:round-grade" data-inline="false"></span>CGPA: 5.00 out of 5.00</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Secondary School Certificate</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between" style="display:none;">
+                  <p class="text-1xl text-gray-800">Monipur High School and College, Science</p>
+                  <div class="flex">
+                    <span class="iconify" data-icon="ic:round-date-range" data-inline="false"></span>2013
+                  </div>
+                  <div class="flex">
+                    <span class="iconify" data-icon="ic:round-grade" data-inline="false"></span>CGPA: 5.00 out of 5.00</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+          <!-- this section contains skills -->
+          <div class="flex flex-col">
+            <hr class="m-1">
+            <div class="flex flex-row text-3xl font-semibold text-gray-800">
+
+              <span class="iconify" data-icon="zondicons:education" data-inline="false"></span>Skills
+
+            </div>
+            <hr class="m-1">
+            <div class="flex flex-col ml-10">
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Programing Languages</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between" style="display:none;">
+                  <p class="text-1xl text-gray-800">C, C++, C#, Java, HTML, Javascript</p>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Database</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between" style="display:none;">
+                  <p class="text-1xl text-gray-800">MYSQL</p>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Web Technologies</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between" style="display:none;">
+                  <p class="text-1xl text-gray-800">Bootstrap, Tailwind CSS</p>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Architecture</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between" style="display:none;">
+                  <p class="text-1xl text-gray-800">MVC</p>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Proficient in</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between" style="display:none;">
+                  <p class="text-1xl text-gray-800">Algorithms and Datastructuress</p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- this section contains projects and achievements -->
+        <div class="flex flex-col bg-green-400 flex-grow rounded-xl md:w-3/5">
+          <!-- this section contains projects -->
+          <div class="flex flex-col">
+
+            <hr class="m-1">
+            <div class="flex flex-row text-3xl font-semibold text-gray-800">
+              <span class="iconify" data-icon="zondicons:education" data-inline="false"></span>Project Works
+            </div>
+            <hr class="m-1">
+
+            <div class="flex flex-col ml-10">
+              <div class="flex flex-col ">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Android app</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between mb-2" style="display:none;">
+                  <p class="flex w-3/5 text-1xl text-gray-800">Android app for BCS preparation based on MCQ questions.</p>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Languages: Java
+                  </div>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Tools:<br>Android Studio
+                  </div>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Endless runner game</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between mb-2" style="display:none;">
+                  <p class="flex w-3/5 text-1xl text-gray-800">A short 3d game ‘Block runner’. Designed and completed 3 levels.</p>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Languages: C#
+                  </div>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Tools:<br>Unity3d, Visual Studio
+                  </div>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Karnaugh map producer</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between mb-2" style="display:none;">
+                  <p class="flex w-3/5 text-1xl text-gray-800">A Program producing Karnaugh map for Synchronous counter in digital circuit design.</p>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Languages: C++
+                  </div>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Tools:<br>Codeblocks
+                  </div>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Speed control system for vehicle</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between mb-2" style="display:none;">
+                  <p class="flex w-3/5 text-1xl text-gray-800">A Prototype of speed control for vehicle. Vehicle recieves data about maximum speed of an area through transmitter set on that region.</p>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Languages: C
+                  </div>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Tools:<br>Arduino
+                  </div>
+                </div>
+
+              </div>
+              <div class="flex flex-col">
+
+                <div class="subtopic flex flex-row ">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Object Detection using machine learning</p>
+                  <span class="expand iconify" data-icon="ant-design:caret-down-filled" data-inline="false"></span>
+                  <span class="collapse iconify " style="display: none;" data-icon="ant-design:caret-up-filled" data-inline="false"></span>
+                </div>
+
+                <div class="details flex flex-col md:flex-row md:justify-between mb-2" style="display:none;">
+                  <p class="flex w-3/5 text-1xl text-gray-800">Brain tumor detection Using Principal Component Analysis and Adaptive Neuro Fuzzy Inference System from MRI images of brain.</p>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Languages: Python
+                  </div>
+                  <div class="flex w-1/5 text-1xl text-gray-800">
+                    Tools:<br>Google Colab
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+          <!-- this section contains achievements -->
+          <div class="flex flex-col">
+
+            <hr class="m-1">
+            <div class="flex flex-row text-3xl font-semibold text-gray-800">
+              <span class="iconify" data-icon="zondicons:education" data-inline="false"></span>Achievements
+            </div>
+            <hr class="m-1">
+
+            <div class="flex flex-col ml-10">
+              <div class="flex flex-col ">
+
+                <div class=" flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Competitive Programing Career</p>
+
+                </div>
+
+                <div class="details flex flex-col mb-2" ">
+                  <div class="flex ">
+                    <p class="flex w-4/5 text-1xl text-gray-800">The 2017 ACM-ICPC Asia Dhaka Regional Contest</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800">45th place</div>
+                  </div>
+                  <div class="flex">
+                    <p class="flex w-4/5 text-1xl text-gray-800">The 2018 ACM-ICPC Asia Dhaka Regional Contest</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800">100th place</div>
+                  </div>
+                  <div class="flex">
+                    <p class="flex w-4/5 text-1xl text-gray-800">BACS-BUBT national programing camp 2017</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800">1st place</div>
+                  </div>
+                  <div class="flex">
+                    <p class="flex w-4/5 text-1xl text-gray-800">BUET Inter University Programming Contest 2018</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800">31th place</div>
+                  </div>
+                  <div class="flex">
+                    <p class="flex w-4/5 text-1xl text-gray-800">SUST Inter University Programming Contest 2017</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800">37th place</div>
+                  </div>
+                  <div class="flex">
+                    <p class="flex w-4/5 text-1xl text-gray-800">Banglalion-Sub Inter University Programming Contest-2018</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800">25th place</div>
+                  </div>
+                  <div class="flex">
+                    <p class="flex w-4/5 text-1xl text-gray-800">and many more...</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="flex flex-col ">
+
+                <div class=" flex flex-row">
+                  <p class="flex-grow text-1xl font-medium text-gray-800">Online Problem solving</p>
+
+                </div>
+
+                <div class="details flex flex-col mb-2" >
+                  <div class="flex ">
+                    <p class="flex w-4/5 text-1xl text-gray-800">Codeforces rank</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800">Expert (max)</div>
+                  </div>
+                  <div class="flex">
+                    <p class="flex w-4/5 text-1xl text-gray-800">UVA online judge problem accepted</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800">350+</div>
+                  </div>
+                  <div class="flex">
+                    <p class="flex w-4/5 text-1xl text-gray-800">Other online judges problem solved:</p>
+                    <div class="flex w-1/5 text-1xl text-gray-800">700+</div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
